@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
+import { Supabase } from 'utils/SupabaseClient'
+import Photos from '@components/Photos'
 
 export default function Home() {
   return (
@@ -14,6 +16,9 @@ export default function Home() {
         <Header title="Welcome to my app!" />
         <p className="description">
           Get started by editing <code>pages/index.js</code>
+        </p>
+        <p className="storage">
+          {publicURL}
         </p>
       </main>
 
