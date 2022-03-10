@@ -1,5 +1,5 @@
 module.exports = {
-    images: {
-      domains: ['bbssdzrtpzmgpykfhidl.supabase.co'],
-    },
-}
+  images: {
+    domains: ["res.cloudinary.com"],
+  },
+};
