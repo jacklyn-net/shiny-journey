@@ -3,11 +3,14 @@ import Header from '@components/Header'
 import Footer from '@components/Footer'
 import Image from 'next/image'
 
-export default function Home({ cuties }) {
-  //let { cuties } = props
-  console.log('cuties', cuties);
+export default function Home(cuties) {
+  //const { results } = props
+  // console.log('cuties', cuties);
   // below line might not be necessary?
   //const { resources } = results;
+
+  console.log('halp me', cuties)
+
 
   return (
     <div className="container">
@@ -31,10 +34,13 @@ export async function getStaticProps() {
     }
   }).then(r => r.json());
 
-  const cuties = results.map((resource) => {
+  const cuties = results.resources.map(resource => {
+    const { width, height } = resource
     return {
       asset_id: resource.asset_id,
-      url: resource.url
+      url: resource.url,
+      width,
+      height
     }
   })
   
