@@ -24,8 +24,6 @@ export default function Home({ images }) {
           <div className="image_container">
           <img
             src={image.url}
-            width={image.width}
-            height={image.height}
             alt={image.alt}
           />
           </div>
@@ -52,13 +50,15 @@ export async function getStaticProps() {
 
   const images = resources.map(resource => { 
     return {
-      url:`https://res.cloudinary.com/${cloudinaryLib}/image/${resource.type}/v1646929623/c_crop,h_200,w_200/${resource.public_id}.${resource.format}`,
+      url:`https://res.cloudinary.com/${cloudinaryLib}/image/${resource.type}/c_fill,h_100,w_250/${resource.public_id}.${resource.format}`,
       //publicId:`${resource.public_id}`,
       //width: resource.width,
       //height: resource.height,
-      //alt: "something here"
+      alt: "something here"
     }
   })
+
+  // https://res.cloudinary.com/demo/image/upload/c_fill,h_150,w_150/sample.jpg
 
 
   return {
