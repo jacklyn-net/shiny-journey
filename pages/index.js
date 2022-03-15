@@ -1,11 +1,6 @@
 import Head from 'next/head'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
-import Image from 'next/image'
-import { buildUrl, extractPublicId } from 'cloudinary-build-url'
-import { Cloudinary } from '@cloudinary/url-gen'
-import {Resize} from '@cloudinary/url-gen/actions/resize'
-import image from 'next/image'
 
 export default function Home({ images }, copyUrl) {
 
@@ -58,8 +53,6 @@ export async function getStaticProps() {
       publicId: resource.public_id,
       copyMe: `![cute animal](https://res.cloudinary.com/${cloudinaryLib}/image/${resource.type}/c_fill,g_auto,q_auto:low,w_300,h_350/${resource.public_id}.${resource.format})
       `,
-      //width: resource.width,
-      //height: resource.height,
       alt: 'cute image of animal'
     }
   })
