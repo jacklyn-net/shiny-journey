@@ -14,7 +14,7 @@ export default function Home({ images }, copyUrl) {
   return (
     <div className="container">
       <Head>
-        <title>Next.js Project</title>
+        <title>ʕ•ᴥ•ʔ</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
@@ -27,7 +27,6 @@ export default function Home({ images }, copyUrl) {
             src={image.url}
             alt={image.alt}
             onClick={() => {navigator.clipboard.writeText(image.copyMe)}}
-            //className={this.state.active ? 'copied': null}
           />
           </div>
         ))}
