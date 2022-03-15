@@ -10,7 +10,7 @@ export default function Home({ results }) {
   // below line might not be necessary?
   //const { resources } = results;
 
-  console.log('halp me', results.url)
+  console.log('halp me', results)
 
   return (
     <div className="container">
@@ -21,9 +21,14 @@ export default function Home({ results }) {
       <main>
         <Header title="Welcome to my app!" />
 
-        <div className="images">
+        <div className="all_images">
         {results.resources.map((resource ) => (
-          <li>{resource.url}</li>
+          <div className="image_container">
+          <Image
+          src={resource.url}
+          layout="fill"
+          />
+          </div>
         ))}
         </div>
 
@@ -42,8 +47,6 @@ export async function getStaticProps() {
 
   const { resources } = results;
 
-  
-  
   return {
     props: { 
       results 

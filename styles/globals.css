@@ -33,3 +33,13 @@ code {
   justify-content: center;
   align-items: center;
 }
+
+.all_images {
+  border: 1px solid black;
+}
+
+.image_container {
+  position: relative;
+  height: 100px;
+  width: 100px;
+}
