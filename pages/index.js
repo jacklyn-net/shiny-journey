@@ -5,8 +5,9 @@ import Image from 'next/image'
 import { buildUrl, extractPublicId } from 'cloudinary-build-url'
 import { Cloudinary } from '@cloudinary/url-gen'
 import {Resize} from '@cloudinary/url-gen/actions/resize'
+import image from 'next/image'
 
-export default function Home({ images }) {
+export default function Home({ images }, copyUrl) {
 
   // console.log('halp', images)
 
@@ -17,7 +18,7 @@ export default function Home({ images }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Header title="Welcome to my app!" />
+        <Header title="cute things are here" />
 
         <div className="all_images">
         {images.map((image ) => (
@@ -25,6 +26,8 @@ export default function Home({ images }) {
           <img
             src={image.url}
             alt={image.alt}
+            onClick={() => {navigator.clipboard.writeText(image.copyMe)}}
+            //className={this.state.active ? 'copied': null}
           />
           </div>
         ))}
@@ -48,17 +51,19 @@ export async function getStaticProps() {
 
   const { resources } = results;
 
+  console.log(results);
+
   const images = resources.map(resource => { 
     return {
-      url:`https://res.cloudinary.com/${cloudinaryLib}/image/${resource.type}/c_fill,h_100,w_250/${resource.public_id}.${resource.format}`,
-      //publicId:`${resource.public_id}`,
+      url:`https://res.cloudinary.com/${cloudinaryLib}/image/${resource.type}/c_fill,g_auto,q_auto:low,w_300,h_350/${resource.public_id}.${resource.format}`,
+      publicId: resource.public_id,
+      copyMe: `![cute animal](https://res.cloudinary.com/${cloudinaryLib}/image/${resource.type}/c_fill,g_auto,q_auto:low,w_300,h_350/${resource.public_id}.${resource.format})
+      `,
       //width: resource.width,
       //height: resource.height,
-      alt: "something here"
+      alt: 'cute image of animal'
     }
   })
-
-  // https://res.cloudinary.com/demo/image/upload/c_fill,h_150,w_150/sample.jpg
 
 
   return {
