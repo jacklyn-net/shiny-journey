@@ -1,38 +1,14 @@
-# Next + Netlify Starter
+# [insert cute things here]
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ed50f56e-4fc2-4c98-8b66-1e5074c6f3d3/deploy-status)](https://app.netlify.com/sites/next-starter/deploys)
+We all love adding cute animal photos to our PRs, but sometimes it's hard to quickly find a photo that works, is the right size, and is still decent quality.
 
-This is a [Next.js](https://nextjs.org/) v11.1.1 project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and set up to be instantly deployed to [Netlify](https://url.netlify.com/SyTBPVamO)!
+I decided to try Next.js out for the first time and create a site that gives you a bunch of good quality, pre-sized photos that you can use for PRs.
 
-This project is a very minimal starter that includes 2 sample components, a global stylesheet, a `netlify.toml` for deployment, and a `jsconfig.json` for setting up absolute imports and aliases. It also includes the [Essential Next.js Build Plugin](https://github.com/netlify/netlify-plugin-nextjs), which will allow for you to implement features like Preview Mode, server-side rendering/incremental static regeneration via Netlify Functions, and internationalized routing.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/cassidoo/next-netlify-starter&utm_source=github&utm_medium=nextstarter-cs&utm_campaign=devex-cs)
-
-(If you click this button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify)
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-### Installation options
-
-**Option one:** One-click deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/cassidoo/next-netlify-starter&utm_source=github&utm_medium=nextstarter-cs&utm_campaign=devex-cs)
-
-**Option two:** Manual clone
-
-1. Clone this repo: `git clone https://github.com/cassidoo/next-netlify-starter.git`
-2. Navigate to the directory and run `npm run dev`
-3. Make your changes
-4. Connect to [Netlify](https://url.netlify.com/Bk4UicocL) manually (the `netlify.toml` file is the one you'll need to make sure stays intact to make sure the export is done and pointed to the right stuff)
+Instructions
+1. Go to https://shiny-journey.netlify.app/
+2. Choose a photo
+	- Warning: This step is the most difficult part of the process.
+3. Click the photo you want to use
+4. Go to your PR
+5. In Edit Mode paste the markdown code that's been copied to your clipboard
+6. Profit
