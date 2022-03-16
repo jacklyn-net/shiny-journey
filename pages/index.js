@@ -45,7 +45,7 @@ export async function getStaticProps() {
 
   const { resources } = results;
 
-  console.log(results);
+  // console.log(results);
 
   const images = resources.map(resource => { 
     return {
