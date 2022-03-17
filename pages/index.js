@@ -14,7 +14,9 @@ export default function Home({ images }, copyUrl) {
       </Head>
       <main>
         <Header title="cute things are here" />
-
+        <div className="text">
+          When you click a photo, an image markdown code is copied to your <br></br>clipboard so you can easily use the image in your GitHub issues or PRs.
+        </div>
         <div className="all_images">
         {images.map((image ) => (
           <div className="image_container">

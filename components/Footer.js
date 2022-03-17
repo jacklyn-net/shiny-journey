@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <>
       <footer className={styles.footer}>
-        <p><a href="https://twitter.com/Jacklyn_Lee">created by jacklyn.</a></p>
+        <p><a href="https://github.com/jacklyn-net/shiny-journey">created by jacklyn.</a></p>
       </footer>
     </>
   )
