@@ -39,7 +39,7 @@ export async function getStaticProps() {
 
   const cloudinaryLib = "cutelify"
 
-  const results = await fetch(`https://api.cloudinary.com/v1_1/${cloudinaryLib}/resources/image`, {
+  const results = await fetch(`https://api.cloudinary.com/v1_1/${cloudinaryLib}/resources/image?max_results=40`, {
     headers: {
       Authorization: `Basic ${Buffer.from(process.env.CLOUDINARY_API_KEY + ':' + process.env.CLOUDINARY_API_SECRET).toString('base64')}`
     }
