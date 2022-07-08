@@ -40,6 +40,27 @@ code {
   flex-direction: column;
 }
 
+@media (max-width: 1300px) {
+  .container .all_images {
+    display: flex;
+    width: 120vh;
+  }
+}
+
+@media (max-width: 965px) {
+  .container .all_images {
+    display: flex;
+    width: 80vh;
+  }
+}
+
+@media (max-width: 650px) {
+  .container .all_images {
+    display: flex;
+    width: 20vh;
+  }
+}
+
 .all_images {
   display: flex;
   flex-direction: row;
