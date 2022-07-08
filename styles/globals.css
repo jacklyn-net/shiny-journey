@@ -2,9 +2,13 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Open Sans', serif;
   background-color: rgb(178, 169, 211);
+}
+
+h1 {
+  font-family: 'Pacifico', serif;
+  font-size: 2.5em;
 }
 
 * {
