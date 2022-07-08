@@ -51,10 +51,9 @@ export async function getStaticProps() {
 
   const images = resources.map(resource => { 
     return {
-      url:`https://res.cloudinary.com/${cloudinaryLib}/image/${resource.type}/c_fill,g_auto,q_auto:low,w_300,h_350/${resource.public_id}.${resource.format}`,
+      url:`https://res.cloudinary.com/${cloudinaryLib}/image/${resource.type}/c_fill,g_auto,q_auto:good,w_300,h_350/${resource.public_id}.${resource.format}`,
       publicId: resource.public_id,
-      copyMe: `![cute animal](https://res.cloudinary.com/${cloudinaryLib}/image/${resource.type}/c_fill,g_auto,q_auto:low,w_300,h_350/${resource.public_id}.${resource.format})
-      `,
+      copyMe: `![cute animal](https://res.cloudinary.com/${cloudinaryLib}/image/${resource.type}/c_fill,g_auto,q_auto:good,w_300,h_350/${resource.public_id}.${resource.format})`,
       alt: 'cute image of animal'
     }
   })
