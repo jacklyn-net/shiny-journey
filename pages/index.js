@@ -45,7 +45,7 @@ export default function Home({ images }) {
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans"></link>
       </Head>
       <main>
-        <Header title="[ cute things here ]" />
+        <Header title="[ git cute ]" />
         <div className="text">
           When you click a photo, an image markdown code is copied to your<br></br>clipboard so you can easily use the image in your GitHub issues or PRs.
           <br></br><br></br>
